@@ -29,6 +29,8 @@
     "dotenv": "^16.6.1",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+    "ml-distance": "^4.0.1",
+    "ml-kmeans": "^7.0.1",
     "mongoose": "^8.15.1",
     "nodemon": "^3.1.10",
     "puppeteer": "^24.40.0",

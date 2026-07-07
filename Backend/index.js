@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const swaggerUi = require("swagger-ui-express");
 
+
 const swaggerSpec = require("./src/config/swagger/swagger.config");
 const main = require('./src/config/db');
 const redisClient = require('./src/config/redis');
@@ -13,6 +14,7 @@ const cartRouter = require('./src/routes/cart-routes');
 const orderRouter = require('./src/routes/order-routes');
 const paymentRouter = require('./src/routes/payment-routes');
 const restaurantRouter = require('./src/routes/restaurant-routes');
+// const segmentRoutes = require('./src/routes/segmentRoutes');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -55,6 +57,7 @@ app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 app.use('/api/payment', paymentRouter);
 app.use('/api/restaurants', restaurantRouter);
+// pp.use('/api', segmentRoutes);
 
 // server init
 const initializeConnection = async () => {
@@ -65,6 +68,16 @@ const initializeConnection = async () => {
         app.listen(process.env.PORT, () => {
             console.log(`Server running on port ${process.env.PORT}`);
         });
+
+        // setTimeout(async () => {
+        //     try {
+        //         console.log('📊 Running initial customer segmentation...');
+        //         await segmentManager.runSegmentation();
+        //         console.log('✅ Initial segmentation complete!');
+        //     } catch (error) {
+        //         console.log('⚠️ Initial segmentation skipped (not enough users yet)');
+        //     }
+        // }, 10000);
 
     } catch (err) {
         console.log("Error " + err);

@@ -61,11 +61,33 @@ const userSchema = new Schema({
 
     },
     isActive: { type: Boolean, default: true },
+    userSegment: {
+        type: Number,
+        default: null,
+        index: true,
+        description: 'Customer segment from K-Means clustering'
+    },
+    segmentUpdatedAt: {
+        type: Date,
+        default: null
+    },
+
+    // Analytics fields
+    orderCount: {
+        type: Number,
+        default: 0
+    },
+    totalSpent: {
+        type: Number,
+        default: 0
+    }
 },
 
     {
         timestamps: true,
     }
 );
+// userSchema.index({ userSegment: 1 });
+
 const User = mongoose.model('User', userSchema);
 module.exports = User;

@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import useAuth  from "@/hooks/useAuth";
+import RamroFoods from "../../../../Assets/RamroFoods.jpg"
 function Header() {
 
 
@@ -19,11 +20,18 @@ function Header() {
       
       
       <div className="flex justify-between items-center container mx-auto py-8 max-w-[80%]">
-  <img
+  {/* <img
     src="https://res.cloudinary.com/dutdah0l9/image/upload/v1720058694/Swiggy_logo_bml6he.png"
     alt="logo"
     className="h-[3rem] w-[10rem]"
-  />
+  /> */}
+  {/* <img src={RamroFoods}   alt="logo"  className="h-[4rem] w-[11rem]"></img> */
+  }
+  <img
+  src={RamroFoods}
+  alt="Ramro Foods"
+  className="h-[5rem] w-[10rem] rounded-lg border border-orange-200 bg-white p-2 shadow-md"
+/>
 
   <div className="flex items-center text-white gap-8 font-bold text-base">
     <a
@@ -31,7 +39,7 @@ function Header() {
       target="_blank"
       className="text-white text-[16px] font-bold"
     >
-      Swiggy Corporate
+      RamroFoods Corporate
     </a>
     <a
       href="https://partner.swiggy.com/login#/swiggy"
@@ -75,7 +83,7 @@ function Header() {
           className="absolute top-0 right-0 w-62 h-112"
         ></img>
         <div className=" container mx-auto flex  text-5xl font-bold  text-center max-w-[50%] text-white">
-          Order food & groceries. Discover best restaurants. Swiggy it!
+          Order food & groceries. Discover best restaurants. RamroFoods it!
         </div>
 
         <div className="flex justify-center gap-4 max-w-7/10 container mx-auto mt-13">

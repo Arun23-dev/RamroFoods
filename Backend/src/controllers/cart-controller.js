@@ -186,6 +186,7 @@ const syncCart = async (req, res) => {
     try {
         const { syncType, localCart } = req.body;
 
+        
         const userId = req.result._id;
 
         // Helper to compute count & totalAmount from restaurants array

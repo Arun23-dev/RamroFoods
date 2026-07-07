@@ -3,6 +3,7 @@ import { useParams, useNavigate, useLocation } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import { setRedirectURL } from "@/slices/RedirectSlice"; 
 // import { syncCartAfterLogin } from "@/features/cart/cartSlice";
+import RamroFoods from "../../../../Assets/RamroFoods.jpg"
 
 export default function CommonHeader() {
 
@@ -42,7 +43,7 @@ export default function CommonHeader() {
           {/* logo and location */}
           <div className="flex justify-center gap-3">
             {/* logo */}
-            <div>
+            {/* <div>
               <svg viewBox="0 0 61 61" height="49" width="49">
                 <g>
                   <path
@@ -58,7 +59,13 @@ export default function CommonHeader() {
                   </clipPath>
                 </defs>
               </svg>
-            </div>
+            </div> */}
+               <img
+               src={RamroFoods}
+               alt="Ramro Foods"
+               className="h-[5rem] w-[10rem] rounded-lg border border-orange-200 bg-white p-2 shadow-md"
+             />
+
 
             {/* location */}
             <div className="flex items-center ml-[30px] space-x-2">
@@ -102,7 +109,7 @@ export default function CommonHeader() {
                   ></path>
                 </svg>
               </span>
-              <div>Swiggy Corporate</div>
+              <div>RamroFoods Corporate</div>
             </div>
 
             <div className="flex items-center gap-2">

@@ -1,3 +1,4 @@
+import RamroFoods from "../../../../Assets/RamroFoods.jpg"
 export default function Footer() {
   return (
     <div className=" bg-[#F0F0F0] ">
@@ -8,13 +9,18 @@ export default function Footer() {
       >
         {/* Logo and Copyright */}
         <div className="pt-10">
-          <img
+          {/* <img
             src="https://media-assets.swiggy.com/portal/testing/seo-home/Group.svg"
             alt="Swiggy Logo"
             className="h-[48px] w-[160px]"
-          />
+          /> */}
+          <img
+          src={RamroFoods}
+          alt="Ramro Foods"
+          className="h-[5rem] w-[10rem] rounded-lg border border-orange-200 bg-white p-2 shadow-md"
+        />
           <p className="mt-4  text-[16px] text-[#02060c99]">
-            &copy; 2025 Swiggy Limited
+            &copy; 2025 RamroFoods Limited
           </p>
         </div>
 
@@ -24,12 +30,12 @@ export default function Footer() {
             Company
           </h3>
           <span>About Us</span>
-          <span>Swiggy Corporate</span>
+          <span>RamroFoods Corporate</span>
           <span>Careers</span>
           <span>Team</span>
-          <span>Swiggy One</span>
-          <span>Swiggy Instamart</span>
-          <span>Swiggy Dineout</span>
+          <span>RamroFoods One</span>
+          <span>RamroFoods Instamart</span>
+          <span>RamroFoods Dineout</span>
           <span>Minis</span>
           <span>Pyng</span>
         </div>
@@ -70,10 +76,10 @@ export default function Footer() {
         {/* Life at Swiggy */}
         <div className="flex flex-col text-sm pt-10 gap-[16px]">
           <h3 className="text-[18px] text-[#02060ceb] font-bold mb-2">
-            Life at Swiggy
+            Life at RamroFoods
           </h3>
-          <span>Explore With Swiggy</span>
-          <span>Swiggy News</span>
+          <span>Explore With RamroFoods</span>
+          <span>RamroFoods News</span>
           <span>Snackables</span>
 
           <h3 className="text-[18px] text-[#02060ceb] font-bold mb- mt-5">

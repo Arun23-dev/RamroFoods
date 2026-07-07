@@ -1,6 +1,7 @@
 // layouts/DashboardLayout.jsx
 import React from "react";
 import { Outlet, useNavigate, useLocation } from "react-router";
+import RamroFoods from "../../../Assets/RamroFoods.jpg"
 import useAuth from '../hooks/useAuth'
 import {
   Sidebar,
@@ -65,10 +66,15 @@ const DashboardLayout = () => {
 
             {/* LOGO */}
             <div className="h-16 flex items-center gap-3 px-4 border-b flex-shrink-0">
-              <div className="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center">
+              {/* <div className="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">S</span>
-              </div>
-              <span className="font-bold text-lg">Swiggy</span>
+              </div> */}
+              {/* <span className="font-bold text-lg">Swiggy</span> */}
+    <img
+    src={RamroFoods}
+    alt="Ramro Foods"
+    className="h-[4rem] w-[10rem] rounded-lg border border-orange-200 bg-white p-2 shadow-md"
+  />
             </div>
 
             {/* NAVIGATION */}
