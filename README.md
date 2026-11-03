@@ -1,12 +1,15 @@
-# 🍽️ Swiggy Project 
+# 🍽️ RamroFoods
 
 ### A full-stack food delivery web application inspired by Swiggy, built using the MERN stack.It replicates real-world food ordering systems including authentication, restaurant browsing, cart management, order processing, user dashboard, and eSewa payment gateway integration 
+
+
+## 🌐 **Live Demo:** [www.ramrofoods.store](https://www.ramrofoods.store)
 
 
 ## 📘 API Documentation (Swagger)
 
 ### You can view the full API documentation here:
--  http://localhost:5000/api-docs
+-  https://refreshfoods.onrender.com/api-docs
 
 ## 📑 Table of Contents
 
@@ -34,13 +37,13 @@
 - JWT-based authentication
 - Protected routes for authenticated users
 - Secure logout functionality
+
 ###  User Dashboard
 - Centralized dashboard for user account management
 -View profile information
 - Manage saved addresses
 -Access order history and payment records
 - Navigate cart and checkout flow
-
 
 ###  Cart & Order System
 - Add and remove items from cart
@@ -49,12 +52,14 @@
 - Create orders from cart
 - View order history and order details
 - Cancel or reorder previous orders
+
 ###  Payment Integration (eSewa Simulation)
 - eSewa payment gateway integration for checkout flow
 - Payment initiation and transaction handling
 - Payment verification via backend
 - Success and failure callback handling pages
 - Order linked with transaction ID for tracking
+
 ###  Address Management
 - Add multiple delivery addresses
 - Update and delete saved addresses
@@ -78,6 +83,18 @@
  ### Profile Page
  ![Profile](./Assets/Profile.png)
 
+ ### ClassDiagram
+ ![ClassDiagram](./Assets/ClassDiagram.png)
+
+ ### Activity Diagram
+ ![Activity Diagram](./Assets/ActivityDiagram.png)
+
+ ### Sequence Diagram
+![Sequence Diagram](./Assets/SequenceDiagram.png)
+
+ ### Deployment Diagram
+ ![Deployment Diagram](./Assets/DeploymenttDiagram.png)
+
 
 ## Demo Video
 
@@ -92,184 +109,9 @@
 ### Backend
 - **Node.js** - JavaScript runtime
 - **Express.js** - Web application framework
-- **Axios** - HTTP client for API requests
 - **MongoDb**--NoSQL Db for the Database
 - **dotenv** - Environment variable management
 
-## Project Structure
-```Swiggy Project:-
-─ Assets
-│   ├── Cart.png
-│   ├── Dashboard.png
-│   ├── HighLevelDesign.png
-│   ├── Order.png
-│   ├── Payment.png
-│   └── Profile.png
-├── Backend
-│   ├── index.js
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── README.md
-│   └── src
-│       ├── config
-│       │   ├── db.js
-│       │   ├── redis.js
-│       │   └── swagger
-│       │       ├── swagger.config.js
-│       │       ├── swagger.options.js
-│       │       └── swagger.schemas.js
-│       ├── controllers
-│       │   ├── cart-controller.js
-│       │   ├── order-controller.js
-│       │   ├── payment-controller.js
-│       │   ├── restaurant-controller.js
-│       │   └── user-controller.js
-│       ├── docs
-│       │   ├── cart.swagger.js
-│       │   ├── order.swagger.js
-│       │   ├── payment.swagger.js
-│       │   ├── restaurant.swagger.js
-│       │   └── user.swagger.js
-│       ├── middleware
-│       │   ├── adminMiddleware.js
-│       │   └── userMiddleware.js
-│       ├── models
-│       │   ├── cart.js
-│       │   ├── order.js
-│       │   ├── payment.js
-│       │   └── user.js
-│       ├── routes
-│       │   ├── cart-routes.js
-│       │   ├── order-routes.js
-│       │   ├── payment-routes.js
-│       │   ├── restaurant-routes.js
-│       │   └── user-routes.js
-│       └── utils
-│           ├── cartTransfromer.js
-│           ├── constant.js
-│           ├── getFormattedCart.js
-│           ├── helper
-│           │   └── esewaSignature.js
-│           └── validate.js
-├── Frontend
-│   ├── components.json
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── jsconfig.json
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── README.md
-│   ├── src
-│   │   ├── App.jsx
-│   │   ├── components
-│   │   │   ├── CartComponent.jsx
-│   │   │   ├── City
-│   │   │   │   ├── CityDelivery.jsx
-│   │   │   │   ├── FoodDelivery.jsx
-│   │   │   │   └── GroceryDelivery.jsx
-│   │   │   ├── Dineout
-│   │   │   │   ├── DineCard.jsx
-│   │   │   │   └── DineOption.jsx
-│   │   │   ├── Failure.jsx
-│   │   │   ├── Food
-│   │   │   │   ├── FoodCard.jsx
-│   │   │   │   └── FoodOption.jsx
-│   │   │   ├── Footer
-│   │   │   │   ├── Footer.jsx
-│   │   │   │   └── Scanner.jsx
-│   │   │   ├── Header
-│   │   │   │   ├── CommonHeader.jsx
-│   │   │   │   └── Header.jsx
-│   │   │   ├── ResturantFoodMenu
-│   │   │   │   ├── MenuCard.jsx
-│   │   │   │   ├── MenuDetails.jsx
-│   │   │   │   └── ResturantFoodMenu.jsx
-│   │   │   ├── Resturants
-│   │   │   │   ├── BestCuisine.jsx
-│   │   │   │   ├── BestPlacesToEat.jsx
-│   │   │   │   ├── ExploreRestaurant.jsx
-│   │   │   │   ├── FilterRestaurant.jsx
-│   │   │   │   ├── RestaurantAllFood.jsx
-│   │   │   │   ├── RestaurantDataFetch.jsx
-│   │   │   │   ├── RestaurantTopFoodCard.jsx
-│   │   │   │   ├── RestaurantTopFood.jsx
-│   │   │   │   └── RestFoodData.jsx
-│   │   │   ├── Shimmer
-│   │   │   │   ├── ShimmerMenuPage.jsx
-│   │   │   │   └── TopFoodShimmer.jsx
-│   │   │   ├── ShopItems
-│   │   │   │   ├── ShopCard.jsx
-│   │   │   │   └── ShopOption.jsx
-│   │   │   ├── Success.jsx
-│   │   │   └── ui
-│   │   │       ├── avatar.jsx
-│   │   │       ├── badge.jsx
-│   │   │       ├── breadcrumb.jsx
-│   │   │       ├── button.jsx
-│   │   │       ├── card.jsx
-│   │   │       ├── collapsible.jsx
-│   │   │       ├── dropdown-menu.jsx
-│   │   │       ├── input.jsx
-│   │   │       ├── scroll-area.jsx
-│   │   │       ├── separator.jsx
-│   │   │       ├── sheet.jsx
-│   │   │       ├── sidebar.jsx
-│   │   │       ├── skeleton.jsx
-│   │   │       └── tooltip.jsx
-│   │   ├── hooks
-│   │   │   ├── useAuth.jsx
-│   │   │   ├── useCartSelection.jsx
-│   │   │   ├── useDebounce.jsx
-│   │   │   └── use-mobile.js
-│   │   ├── index.css
-│   │   ├── layout
-│   │   │   ├── AuthLayout.jsx
-│   │   │   ├── DashboardLayout.jsx
-│   │   │   └── MainLayout.jsx
-│   │   ├── lib
-│   │   │   ├── esewa.js
-│   │   │   └── utils.js
-│   │   ├── main.jsx
-│   │   ├── pages
-│   │   │   ├── Cart.jsx
-│   │   │   ├── CheckoutPage.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Home.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── Order.jsx
-│   │   │   ├── PaymentPage.jsx
-│   │   │   ├── ProfileSettings.jsx
-│   │   │   ├── Register.jsx
-│   │   │   ├── ResturantMenu.jsx
-│   │   │   ├── Resturants.jsx
-│   │   │   └── SearchPage.jsx
-│   │   ├── routes
-│   │   │   ├── AuthRoutes.jsx
-│   │   │   ├── OpenRoutes.jsx
-│   │   │   └── ProtectedRoutes.jsx
-│   │   ├── slices
-│   │   │   ├── CartSlice.js
-│   │   │   ├── FoodMenuSlice.js
-│   │   │   ├── OrderSlice.js
-│   │   │   ├── RedirectSlice.js
-│   │   │   ├── ResturantSlice.js
-│   │   │   └── UserSlice.js
-│   │   ├── Store
-│   │   │   └── Store.js
-│   │   └── Utils
-│   │       ├── axiosClient.js
-│   │       ├── CacheManager.js
-│   │       ├── Constants.js
-│   │       ├── DineData.js
-│   │       ├── foodDataFormatter.js
-│   │       ├── FoodData.js
-│   │       ├── FoodOnlineAddress.js
-│   │       ├── GroceryOnlineAddress.js
-│   │       ├── helper.jsx
-│   │       └── ShopData.js
-│   └── vite.config.js
-└── README.md
-```
 ##  Getting Started
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -279,8 +121,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Arun23-dev/Swiggy_Clone.git
-   cd Swiggy-Project
+   git clone https://github.com/Arun23-dev/RamroFoods
+   cd RamroFoods
    ```
 
 2. **Install Frontend Dependencies**
@@ -304,6 +146,7 @@
    DB_CONNECT_KEY=YOUR_OWN
    REDIS_HOST=YOUR_OWN
    REDIS_PORT=YOUR_OWN
+   REDIS_KEY=YOUR_OWN
 
    JWT_KEY=YOUR_OWN
 
@@ -411,4 +254,4 @@ Full-Stack Developer (MERN Stack)
 ### 🔗 Connect with me
 - 🐙 GitHub: [@Arun23-dev](https://github.com/Arun23-dev)
 - 💼 LinkedIn:https://www.linkedin.com/in/aruncodees/
-- 🚀 Project Repo: [Swiggy Food Delivery Web](https://github.com/Arun23-dev/Swiggy-food-delivery-Web)
+- 🚀 Project Repo: [RamroFoods](https://github.com/Arun23-dev/RamroFoods)
